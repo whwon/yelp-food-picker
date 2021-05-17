@@ -1,9 +1,11 @@
 import React from 'react';
-import { FormControl, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
+import { Box, FormControl, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
 
 export const Radius = ({ requestedData, setRequest }) => (
   <FormControl component="fieldset">
-    <FormLabel component="legend">Distance</FormLabel>
+    <FormLabel component="legend">
+      <Box component='span' fontWeight="fontWeightBold" fontSize={20} lineHeight={2}>Distance</Box>
+    </FormLabel>
     <RadioGroup
       name="radius"
       value={requestedData.radius}

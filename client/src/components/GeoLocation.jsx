@@ -26,8 +26,14 @@ export const GeoLocation = ({ requestedData, setRequest }) => {
 
   return (
     <>
-      <Button variant='outlined' color='secondary' onClick={getLocation}>Get GeoLocation</Button>
-      <Input placeholder='Zip Code' onChange={(e) => setRequest({ ...requestedData, location: e.target.value })}/>
+      <Button
+        variant='outlined'
+        color={requestedData.latitude > 0 ? 'primary' : 'default'}
+        onClick={getLocation}
+      >
+        Get Location
+      </Button>
+      {/* <Input placeholder='Zip Code' onChange={(e) => setRequest({ ...requestedData, location: e.target.value })}/> */}
     </>
   )
 }

@@ -1,9 +1,11 @@
 import React from 'react';
-import { FormControl, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
+import { Box, FormControl, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
 
 export const SortBy = ({ requestedData, setRequest }) => (
     <FormControl component="fieldset">
-      <FormLabel component="legend">Sort by</FormLabel>
+      <FormLabel component="legend">
+        <Box component='span' fontWeight="fontWeightBold" fontSize={20} lineHeight={2}>Sort by</Box>
+      </FormLabel>
       <RadioGroup
         name="sort_by"
         value={requestedData.sort_by}

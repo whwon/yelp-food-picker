@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AppBar, Tab, Tabs } from '@material-ui/core';
 
-const terms = ['Pizza', 'Breakfast', 'Burgers', 'Chinese', 'Mexican', 'Korean', 'Thai', 'Steakhouses', 'Seafood', 'Japanese', 'Italian', 'Vietnamese', 'Sandwiches', 'Vegetarian', 'Sushi', 'American'];
+const terms = ['Restaurants', 'Pizza', 'Breakfast', 'Burgers', 'Chinese', 'Mexican', 'Korean', 'Thai', 'Steakhouses', 'Seafood', 'Japanese', 'Italian', 'Vietnamese', 'Sandwiches', 'Vegetarian', 'Sushi', 'American'];
 
 export const Terms = ({ requestedData, setRequest }) => {
   const [value, setValue] = useState(0);
