@@ -1,12 +1,12 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
+import { RoundedButton } from './RoundedButton';
 
 export const OpenNow = ({ requestedData, setRequest }) => (
-  <Button
+  <RoundedButton
     variant='outlined'
     color={requestedData.open_now ? 'primary' : 'default'}
     onClick={() => setRequest({...requestedData, open_now: !requestedData.open_now})}
   >
     Open Now
-  </Button>
+  </RoundedButton>
 );

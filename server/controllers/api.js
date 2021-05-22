@@ -17,6 +17,7 @@ export const getYelpAPI = async (req, res) => {
       term,
       sort_by,
       open_now,
+      categories: 'food', // TODO: Maybe make this changeable too in the future
       limit: 50
     }
   })

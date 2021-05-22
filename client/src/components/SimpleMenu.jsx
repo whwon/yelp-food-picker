@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { Button, Menu, MenuItem } from '@material-ui/core';
+import { Menu, MenuItem } from '@material-ui/core';
 import { ExpandMore as ExpandIcon } from '@material-ui/icons';
+import { RoundedButton } from './RoundedButton';
 
 const StyledMenuItem = withStyles((theme) => ({
   root: {
@@ -22,9 +23,9 @@ export const SimpleMenu = ({ buttonName, children }) => {
 
   return (
     <div>
-      <Button aria-haspopup="true" variant='outlined' endIcon={<ExpandIcon />} onClick={handleClick}>
+      <RoundedButton variant='outlined' endIcon={<ExpandIcon />} onClick={handleClick}>
         {buttonName}
-      </Button>
+      </RoundedButton>
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}

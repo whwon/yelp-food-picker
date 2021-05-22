@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
-import { Button, Input } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { Input } from '@material-ui/core';
+import { RoundedButton } from './RoundedButton';
 
 export const GeoLocation = ({ requestedData, setRequest }) => {
   const [noGeoLoc, geoLocChecked] = useState('');
+
+  useEffect(() =>
+    getLocation()
+  , [])
 
   function getLocation() {
     if (navigator.geolocation) {
@@ -26,13 +31,13 @@ export const GeoLocation = ({ requestedData, setRequest }) => {
 
   return (
     <>
-      <Button
+      <RoundedButton
         variant='outlined'
         color={requestedData.latitude > 0 ? 'primary' : 'default'}
         onClick={getLocation}
       >
         Get Location
-      </Button>
+      </RoundedButton>
       {/* <Input placeholder='Zip Code' onChange={(e) => setRequest({ ...requestedData, location: e.target.value })}/> */}
     </>
   )
